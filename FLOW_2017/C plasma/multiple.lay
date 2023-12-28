@@ -1,0 +1,355 @@
+#!MC 1000
+$!VarSet |LFDSFN1| = '"rho.plt"'
+$!VarSet |LFDSVL1| = '"x" "y" "var"'
+$!VarSet |LFDSFN2| = '"vp.plt"'
+$!VarSet |LFDSVL2| = '"x" "y" "var"'
+$!VarSet |LFDSFN3| = '"temp.plt"'
+$!VarSet |LFDSVL3| = '"x" "y" "var"'
+$!SETSTYLEBASE FACTORY
+$!PAPER 
+  BACKGROUNDCOLOR = WHITE
+  ISTRANSPARENT = YES
+  ORIENTPORTRAIT = NO
+  SHOWGRID = YES
+  SHOWRULER = YES
+  SHOWPAPER = YES
+  PAPERSIZE = LETTER
+  PAPERSIZEINFO
+    {
+    LETTER
+      {
+      WIDTH = 8.5
+      HEIGHT = 11
+      LEFTHARDCLIPOFFSET = 0.125
+      RIGHTHARDCLIPOFFSET = 0.125
+      TOPHARDCLIPOFFSET = 0.125
+      BOTTOMHARDCLIPOFFSET = 0.125
+      }
+    }
+  RULERSPACING = ONEINCH
+  PAPERGRIDSPACING = HALFINCH
+  REGIONINWORKAREA
+    {
+    X1 = -0.05
+    Y1 = -0.05
+    X2 = 11.05
+    Y2 = 8.55
+    }
+$!COLORMAP 
+  CONTOURCOLORMAP = SMRAINBOW
+$!COLORMAPCONTROL RESETTOFACTORY
+### Frame Number 1 ###
+$!READDATASET  '|LFDSFN1|' 
+  INITIALPLOTTYPE = XYLINE
+  INCLUDETEXT = NO
+  INCLUDEGEOM = NO
+  RESETSTYLE = NO
+  VARLOADMODE = BYNAME
+  VARNAMELIST = '|LFDSVL1|' 
+$!REMOVEVAR |LFDSVL1|
+$!REMOVEVAR |LFDSFN1|
+$!READDATASET  '|LFDSFN2|' 
+  INITIALPLOTTYPE = XYLINE
+  INCLUDETEXT = NO
+  INCLUDEGEOM = NO
+  READDATAOPTION = APPEND
+  RESETSTYLE = NO
+  VARLOADMODE = BYNAME
+  VARNAMELIST = '|LFDSVL2|' 
+$!REMOVEVAR |LFDSVL2|
+$!REMOVEVAR |LFDSFN2|
+$!READDATASET  '|LFDSFN3|' 
+  INITIALPLOTTYPE = XYLINE
+  INCLUDETEXT = NO
+  INCLUDEGEOM = NO
+  READDATAOPTION = APPEND
+  RESETSTYLE = NO
+  VARLOADMODE = BYNAME
+  VARNAMELIST = '|LFDSVL3|' 
+$!REMOVEVAR |LFDSVL3|
+$!REMOVEVAR |LFDSFN3|
+$!FRAMELAYOUT 
+  SHOWBORDER = NO
+  HEADERCOLOR = RED
+  XYPOS
+    {
+    X = 1
+    Y = 0.25
+    }
+  WIDTH = 8
+  HEIGHT = 8
+$!PLOTTYPE  = XYLINE
+$!FRAMENAME  = 'Frame 001' 
+$!DELETELINEMAPS 
+$!ACTIVELINEMAPS  =  [4]
+$!GLOBALLINEPLOT 
+  DATALABELS
+    {
+    DISTANCESKIP = 5
+    }
+  LEGEND
+    {
+    XYPOS
+      {
+      X = 95
+      }
+    }
+$!LINEMAP  [1]
+  NAME = '&DV&' 
+  ASSIGN
+    {
+    ZONE = 1
+    XAXISVAR = 1
+    YAXISVAR = 2
+    }
+  LINES
+    {
+    COLOR = RED
+    }
+  SYMBOLS
+    {
+    COLOR = RED
+    FILLCOLOR = RED
+    }
+  BARCHARTS
+    {
+    COLOR = RED
+    FILLCOLOR = RED
+    }
+  ERRORBARS
+    {
+    COLOR = RED
+    }
+$!LINEMAP  [2]
+  NAME = '&DV&' 
+  ASSIGN
+    {
+    ZONE = 1
+    XAXISVAR = 1
+    YAXISVAR = 3
+    }
+  LINES
+    {
+    COLOR = BLUE
+    LINETHICKNESS = 0.4
+    }
+  SYMBOLS
+    {
+    SYMBOLSHAPE
+      {
+      GEOMSHAPE = CIRCLE
+      }
+    COLOR = BLUE
+    FILLMODE = USELINECOLOR
+    FILLCOLOR = GREEN
+    SIZE = 1.4
+    }
+  BARCHARTS
+    {
+    COLOR = GREEN
+    FILLCOLOR = GREEN
+    }
+  ERRORBARS
+    {
+    COLOR = GREEN
+    }
+  INDICES
+    {
+    JRANGE
+      {
+      MIN = 65
+      MAX = 65
+      }
+    }
+$!LINEMAP  [3]
+  NAME = '&DV&' 
+  ASSIGN
+    {
+    ZONE = 2
+    XAXISVAR = 1
+    YAXISVAR = 3
+    YAXIS = 2
+    }
+  LINES
+    {
+    COLOR = CUSTOM8
+    LINETHICKNESS = 0.4
+    }
+  SYMBOLS
+    {
+    SYMBOLSHAPE
+      {
+      GEOMSHAPE = CIRCLE
+      }
+    COLOR = CUSTOM8
+    FILLMODE = USELINECOLOR
+    FILLCOLOR = GREEN
+    SIZE = 1.4
+    }
+  BARCHARTS
+    {
+    COLOR = GREEN
+    FILLCOLOR = GREEN
+    }
+  ERRORBARS
+    {
+    COLOR = GREEN
+    }
+  INDICES
+    {
+    JRANGE
+      {
+      MIN = 65
+      MAX = 65
+      }
+    }
+$!LINEMAP  [4]
+  NAME = '&DV&' 
+  ASSIGN
+    {
+    ZONE = 3
+    XAXISVAR = 1
+    YAXISVAR = 3
+    YAXIS = 3
+    }
+  LINES
+    {
+    COLOR = CUSTOM25
+    LINETHICKNESS = 0.4
+    }
+  SYMBOLS
+    {
+    SYMBOLSHAPE
+      {
+      GEOMSHAPE = CIRCLE
+      }
+    COLOR = CUSTOM33
+    FILLMODE = USELINECOLOR
+    FILLCOLOR = GREEN
+    SIZE = 1.4
+    }
+  BARCHARTS
+    {
+    COLOR = GREEN
+    FILLCOLOR = GREEN
+    }
+  ERRORBARS
+    {
+    COLOR = GREEN
+    }
+  INDICES
+    {
+    JRANGE
+      {
+      MIN = 65
+      MAX = 65
+      }
+    }
+$!XYLINEAXIS 
+  DEPXTOYRATIO = 1
+  GRIDAREA
+    {
+    DRAWBORDER = YES
+    }
+$!XYLINEAXIS 
+  XDETAIL 1
+    {
+    RANGEMIN = 1.071619987487793
+    RANGEMAX = 2.3285057838916781
+    GRSPACING = 0.2
+    TICKLABEL
+      {
+      TEXTSHAPE
+        {
+        FONT = TIMES
+        HEIGHT = 4
+        }
+      }
+    TITLE
+      {
+      TITLEMODE = USETEXT
+      TEXT = 'R' 
+      TEXTSHAPE
+        {
+        FONT = TIMES
+        HEIGHT = 5
+        }
+      }
+    }
+$!XYLINEAXIS 
+  YDETAIL 1
+    {
+    RANGEMIN = 0
+    RANGEMAX = 8000000000000000000
+    GRSPACING = 2E+018
+    TICKLABEL
+      {
+      TEXTSHAPE
+        {
+        FONT = TIMES
+        HEIGHT = 4
+        }
+      }
+    TITLE
+      {
+      TITLEMODE = USETEXT
+      TEXT = 'r' 
+      TEXTSHAPE
+        {
+        FONT = GREEK
+        HEIGHT = 7
+        }
+      PERCENTALONGLINE = 60
+      }
+    }
+$!XYLINEAXIS 
+  YDETAIL 2
+    {
+    RANGEMIN = 0
+    RANGEMAX = 13252.124884667968
+    GRSPACING = 2000
+    TITLE
+      {
+      TITLEMODE = USETEXT
+      TEXT = 'v [m/s]' 
+      TEXTSHAPE
+        {
+        FONT = TIMES
+        HEIGHT = 5
+        }
+      OFFSET = 7
+      }
+    AXISLINE
+      {
+      AXISALIGNMENT = WITHGRIDMAX
+      }
+    }
+$!XYLINEAXIS 
+  YDETAIL 3
+    {
+    RANGEMIN = 0
+    RANGEMAX = 1200
+    GRSPACING = 200
+    TICKLABEL
+      {
+      TEXTSHAPE
+        {
+        FONT = TIMES
+        HEIGHT = 4
+        }
+      }
+    TITLE
+      {
+      TITLEMODE = USETEXT
+      TEXT = 'T [eV]' 
+      TEXTSHAPE
+        {
+        FONT = TIMES
+        HEIGHT = 5
+        }
+      OFFSET = 8
+      }
+    }
+$!LINEPLOTLAYERS 
+  SHOWSYMBOLS = YES
+$!SETSTYLEBASE CONFIG

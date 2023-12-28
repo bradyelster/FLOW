@@ -1,0 +1,136 @@
+ &input_which	input_EQDSK		=		.false.	!whether to read the input from an EQDSK file
+				EQDSK_file		=		'eqdsk.data'	! the name of the eqdsk file
+ /
+
+ &input_triangularity	tri_type  		=	18 ,			!contour type
+			n_tri  		=	8 ,			!number of harmonics
+			theta_points_max 	=	200,			!points for a numerical contour
+			a_elps		= 	.6d0 ,			!parameter for elliptic boundary
+			b_elps		= 	1.430769230769d0 			!parameter for elliptic boundary
+			k_ellipt	=	1.75d0			!parameter for elliptic/triangular boundary
+			delta_up	=	-0.6d0			!parameter for elliptic/triangular boundary
+			delta_down	=	-0.6d0			!parameter for elliptic/triangular boundary
+ /
+
+ &input_constants		rmajor		=	1.7D0 , 			!major geometrical of the torus
+			rcenter		=	1.7d0 , 			!
+			zcenter		=	0.d0 , 			!
+			x_size		= 	1.56666666666d0 , 			!size of the computational domain
+			z_size		= 	2.861538461538d0 , 			!size of the computational domain
+			grid_type	=	-10				!type of grid
+			eq_type		= 	1 , 			!equation : MHD=1,CGL=2, GCP=3
+			eq3_opt 		= 	2 ,			!anisotropy definition for GCP
+			data_dim		= 	41 ,			!number of points in numerical input
+			numerical	=	.true. ,			!whether to use numerical input at all
+			Broot 		= 	0,			!type of equilibrium
+			mass 		= 	3.3452d-27,	 	!ion mass
+			me_ov_mi =	5.443658E-04			!ratio of m_e / m_i
+			pe_ov_p		=	0.382d0				!ratio between p_electron and p_total
+			eV 		=  	1.6022d-19		!elementary charge
+/
+
+
+ &input_flow		mach_phi_max	=	0.6d0 ,			!maximum sonic Mach toroidal
+			alpha_mphi	=	1.5d0 ,			!exponent in Mach toroidal equation
+  			mphi_min 		=	1.0d-1 ,			!parameter for minimum Mach toroidal,,,
+			mach_theta_max	= 	0.2d0 ,			!maximum sonic Mach poloidal 
+			mach_theta_edge 	= 0.1d0 			!minimum sonic Mach poloidal
+			t_mth				=	0.75d0	! for "t shape" in mach_theta(psi)
+			w_mth				=	0.5d0	! for "t shape" in mach_theta(psi)
+			enforce_static	 = 	0  !for bootstrap diagnostic: 0 -> no effect, 1 -> static_equi = .true., 2 -> static_equi = .false.
+ /
+
+ &input_magnetic		b_phi_zero	= 	1.26d0 , 			!vacuum B_phi at R_major
+			F_opt 		=	1 ,			!option for B_phi equation
+			Fc_o_Fv 		= 	1.05d0 ,			!B_phi_center/B_phi_vacuum (F_opt=1)
+			kappa 		= 	4.d0 , 			!exponent for B_phi equation (F_opt=1)
+			eta_P 		=	.5d0 ,			!constant for B_phi equation (F_opt=2)
+			mu_RFP 		=	1.216d0 ,			!constant for B_phi equation (F_opt=5)
+			mu_mag 		=	1.2566370614359173d-6		!permeability of free space
+			psi_e		=	0.00d0			!position of separatrix if tri_type==13
+			inter_switch =	257
+ 			Z_eff_0	=		1.d0		! for Z_eff profile
+			delta_Z_eff		=		2.d0		! for Z_eff profile
+			Z_eff_exp		=		0.25d0		! for Z_eff profile
+ /
+
+
+ &input_p_d_profile	gamma 		= 	1.66666666667d0, 		 		!specific heats ratio
+			dcenter 		=	4.5d-7		!quasi density at the center
+			de_o_dc 		= 	1.d-2 , 			!quasi density edge/center value
+			alpha 		= 	3.1513379971277855d0, 			!exponent for pressures equations
+			alpha_rho 		=	0.50d0,			!exponent for density equation
+			beta_center	= 	.06d0 ,			!(approximate) beta in the center
+			betaperp_center 	= 	0.1d0, 			!(approximate) perpendicular beta in the center
+			betapar_center 	= 	0.1d0, 			!(approximate) parallel beta in the center
+			pe_o_pc 		=	7.d-4, 			!quasi pressure edge/center value
+			qpee_o_qpec 	=	1.d-4, 			!quasi perpendicular pressure edge/center value 
+			qpae_o_qpac 	=	1.d-4, 			!quasi parallel pressure edge/center value
+			tparcenter  	= 	2.1d11,			!parallel temperature in the center
+			tpae_o_tpac 	= 	1.d-8,  			!parallel temperature edge/center value
+			theteps 		= 	.2d-1			!anisotropy control for eq3_opt=1
+			p_opt			=	10				!type of pressure equation
+ /
+
+
+ &input_numerical		numerical_opt = 1,		! option for numerical input
+			numerical_n 	=	.true. ,			!density
+			numerical_p_iso 	=	.true. ,			!isotropic pressure
+			numerical_p_par 	=	.false. ,			!parallel pressure%
+			numerical_p_perp 	=	.false. ,			!perpendicular pressure
+			numerical_F	=	.true. ,			!B_phi
+			numerical_omega 	=	.false. 			!toroidal rotation
+			omega_option		=	1			!1=mphi, 2=omega
+			numerical_mtheta 	=	.false. 			!poloidal rotation
+			numerical_psiprim	=	.false.
+ /
+
+
+ &input_solver		n_min		=	33 ,			!size of the starting grid
+			n		=	129 , 			!size of the final grid
+			min_it 		=	50 ,			!minimum number of iterations for each grid 
+			max_it 		=	5451 , 			!maximum number of iterations for each grid
+			accelerate 	=	.true. , 			!whether to use Chebyshev acceleration
+			fix_orp		=	.25d-0 ,			!constant over relaxation parameter
+			bc_type		=	4 ,			!type of boundary condition
+			max_orp		=	1.5d0 ,			!maximum over relaxation parameter if bc_type=2
+			bc_switch	=	65,			! when to switch bc for bc_type=4
+			write_all	=	.true.		! whether to write all output
+			write_all_bin	=	.false.
+			restart = .false.			! whether to proceed a previous run or start from scratch
+			jump_option = 0		! for transonic equilibria: 1-> impose jump condition
+			lambda0_fix = 3.d0
+			dir_switch = 4
+			delta_Bern_fact = 4.d0
+ /
+
+
+ &input_gravity	gravity_type	=	0	! 0 -> no gravity; 1 -> point mass at origin
+			G_gravity	=	0.00d-11	! gravitational constant
+			M_gravity	=	.0d22	! point mass originating the gravity field
+/
+
+ &input_MARS	MARS_output	=	.false.	!whether to save MARS input
+								 enq	=	44	! this is the number of psi points
+								 nsurf	=	200 ! this is the number of theta points
+ /
+
+
+ &input_Alf		mach_alf_0	=	3.5d0			!Mach Alfvén poloidal for super-Alfvénic equilibria
+			fraction		=	0.00d0			!this is to set inner and outer regions
+			ffrac		=	1.d0			!for bzero(psi)
+			amult		=	-5.d0			!for bzero(psi)
+			pmult		=	-12.5d0			!for bzero(psi)
+			pfact		=	3.d0			!for bzero(psi)
+			pexp		=	1.25d0			!for bzero(psi)
+			p_eps		=	1.d-3			!for bzero(psi)
+			b_vert		=	0.d0			!old BC
+			b_edge		=	0.d0			!old BC
+ /
+
+ &input_LDX	psi_in		=	0.16d0,		! inner boundary value for psi
+				psi_out		=	0.0d0			! outer boundary value for psi "0.124d0"
+				psifrac		=	.6d0			! for boundary pressure
+				alpha_th	=	3.d0			! anisotropy exponent
+				aux_fact	=	8.d0			! pressure slope
+ /

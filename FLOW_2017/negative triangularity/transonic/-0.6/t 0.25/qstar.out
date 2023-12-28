@@ -1,0 +1,24 @@
+ qstar =    3.19865741968413     
+ surf =    1.89096887398549     
+ volume =    3.37243056081549     
+ plasma current =    693260.074996109     
+ nu =   0.240491474377764     
+ betator =   1.072710567900923E-002
+ betapol =   0.452928425070711     
+ average epsilon =   0.456371307826652     
+ inverse aspect ratio =   0.352941154580677     
+ total pressure * area =    12663.2078823031     
+ beta_LDX =   0.390226692694309     
+ B_phi_average =    1.23853890357147     
+ B_pol_average =   0.197391298648321     
+ mass =   3.883062475969103E-007
+ kinetic energy =    9646.94163283920     
+ L_i =   1.513222825689551E-006
+ small_l_i =    1.41668760416457     
+                
+ I_BS_Sauter =   0.000000000000000E+000
+ I_BS_NCLASS =   0.000000000000000E+000
+ I_BS_Sauter_phi =   0.000000000000000E+000
+ I_BS_NCLASS_phi =   0.000000000000000E+000
+ f_BS_Sauter =   0.000000000000000E+000
+ f_BS_NCLASS =   0.000000000000000E+000
