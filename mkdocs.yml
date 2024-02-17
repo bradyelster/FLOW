@@ -1,0 +1,10 @@
+site_name: FLOW
+#site_url: https://example.com/
+
+nav:
+  - Home: index.md
+  - About: about.md
+
+theme:
+  name: 'rtd-dropdown'
+  #name: 'readthedocs'
