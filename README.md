@@ -14,7 +14,6 @@ The most unique feature of the code is the ability to study flow-dependent equil
 Despite the obvious relevance of the study of equilibrium in the presence of strong flow, little work has been done on the subject, in particular regarding poloidal rotation, which constitutes a more difficult problem with respect to purely toroidal rotation. To the best of the authors' knowledge, before the code development no numerical work at all had been done on equilibria with poloidal flow exceeding the poloidal sound speed.
 
 The code main targets are:
-
 1. The study of MHD and kinetic tokamak equilibria with purely toroidal flow
 2. The study of MHD equilibria in the presence of arbitrary poloidal flow
 
@@ -25,6 +24,6 @@ See the [documentation](http://dedalus-project.readthedocs.org) for tutorials an
 ## Links
 
 * Project homepage: <https://www.auburn.edu/cosam/faculty/physics/guazzotto/research/FLOW_main.html>
-* Code repository: <https://github.com/bradyelster/FLOW>
-* Documentation: <http://FLOW.readthedocs.org>
 * Author homepage: <https://www.auburn.edu/cosam/faculty/physics/guazzotto/research/>
+* Code repository: <https://github.com/bradyelster/FLOW>
+* Documentation: <http://FLOW-framework.readthedocs.org>
