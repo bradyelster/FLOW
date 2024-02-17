@@ -3,6 +3,19 @@
   FLOW
 </h1>
 
+<!-- Information badges -->
+<p align="center">
+  <a href="https://www.repostatus.org/#active">
+    <img alt="Repo status" src="https://www.repostatus.org/badges/latest/active.svg" />
+  </a>
+  <a href="http://flow-framework.readthedocs.org">
+    <img alt="Read the Docs" src="https://img.shields.io/readthedocs/dedalus-project">
+  </a>
+  <a href="https://fortran-lang.org">
+    <img alt="Fortran" src="https://img.shields.io/badge/Fortran-734f96?logo=fortran&style=flat" />
+  </a>
+</p>
+
 <p align="center">
     <img width="300" src="https://github.com/bradyelster/FLOW/blob/046650ccd7100a337e5b64f068555b5b476c0e1e/docs/transonic_rho.png">
 </p>
@@ -19,7 +32,7 @@ The code main targets are:
 
 For a more detailed description of the code, see [L. Guazzotto, R. Betti, J. Manickam and S. Kaye, PoP 11, 604 (2004)](https://pubs.aip.org/aip/pop/article-abstract/11/2/604/260879/Numerical-study-of-tokamak-equilibria-with?redirectedFrom=fulltext)
 
-See the [documentation](http://dedalus-project.readthedocs.org) for tutorials and information on getting started.
+See the [documentation](http://FLOW-framework.readthedocs.org) for tutorials and information on getting started.
 
 ## Links
 
