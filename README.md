@@ -3,6 +3,10 @@
   FLOW
 </h1>
 
+<p align="center">
+    <img width="300" src="https://github.com/bradyelster/FLOW/blob/046650ccd7100a337e5b64f068555b5b476c0e1e/docs/transonic_rho.png">
+</p>
+
 FLOW was developed as a collaboration between the University of Rochester and the Princeton Plasma Physics Laboratory. FLOW is written primarily in Fortran and is used to study the equilibrium properties of toroidal devices, such as tokamaks, in conditions relevant to present day experiments. 
 
 The most unique feature of the code is the ability to study flow-dependent equilibria. Present day experiments often show the presence of high macroscopic flow. Large toroidal flows, of the order of a significant fraction of the sound spped, are routinely measured in tokamak plasmas (e.g., DIII-D, Alcator C-Mod), even in the absence of an external source of momentum. Measured toroidal rotation is particularly large in low-aspect ratio machines (NSTX, MAST). Poloidal rotation in experiments is somewhat lower and mostly observed near the plasma edge. Edge rotation can be of the order of the poloidal sound speed (~10s km/s): even such a small rotation can create large qualitative modifications in the equilibrium profiles. [R. Betti, J. P. Freidberg, PoP 7, 2439 (2000)](https://pubs.aip.org/aip/pop/article-abstract/7/6/2439/103410/Radial-discontinuities-in-tokamak?redirectedFrom=fulltext)
