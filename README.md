@@ -27,8 +27,8 @@ The most unique feature of the code is the ability to study flow-dependent equil
 Despite the obvious relevance of the study of equilibrium in the presence of strong flow, little work has been done on the subject, in particular regarding poloidal rotation, which constitutes a more difficult problem with respect to purely toroidal rotation. To the best of the authors' knowledge, before the code development no numerical work at all had been done on equilibria with poloidal flow exceeding the poloidal sound speed.
 
 The code main targets are:
-1. The study of MHD and kinetic tokamak equilibria with purely toroidal flow
-2. The study of MHD equilibria in the presence of arbitrary poloidal flow
+1. The study of MHD and kinetic tokamak equilibria with purely toroidal flow.
+2. The study of MHD equilibria in the presence of arbitrary poloidal flow.
 
 For a more detailed description of the code, see [L. Guazzotto, R. Betti, J. Manickam and S. Kaye, PoP 11, 604 (2004)](https://pubs.aip.org/aip/pop/article-abstract/11/2/604/260879/Numerical-study-of-tokamak-equilibria-with?redirectedFrom=fulltext)
 
